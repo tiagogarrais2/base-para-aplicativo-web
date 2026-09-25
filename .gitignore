@@ -24,3 +24,7 @@ pnpm-debug.log*
 # Editor folders
 .vscode/
 .idea/
+
+# Next.js agent docs
+AGENTS.md
+CLAUDE.md

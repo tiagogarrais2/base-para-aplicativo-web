@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": { 
-    "docker:up": "docker compose up -d",
+    "docker:up": "docker start nfc_postgres 2>/dev/null || docker compose up -d 2>/dev/null || docker-compose up -d 2>/dev/null || true",
     "db:push": "prisma generate && prisma db push",
     "predev": "npm run docker:up && npm run db:push",
     "dev": "next dev -p 3000",
